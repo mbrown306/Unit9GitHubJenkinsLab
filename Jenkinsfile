@@ -5,7 +5,7 @@ Pipeline {
         stage('Checkout Sources') {
             steps {
                 echo 'Building..'
-               git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
+                git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
             }
         }
         stage('Build') {
