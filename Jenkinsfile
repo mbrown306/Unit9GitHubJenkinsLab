@@ -1,4 +1,3 @@
-
 node {
   agent any
 
@@ -6,20 +5,17 @@ node {
     maven "maven3"
   }
 
-  stage('checkout sources') {
-        // You should change this to be the appropriate thing
-        git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
-  }
-  stage('Build') {
-    steps {
-       ssh "mvn -version"
-       sh  'mvn clean package'
+  stages{
+     stage('checkout sources') {
+           // You should change this to be the appropriate thing
+           git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
      }
-  }
-  stage('Test') {
-    // you should build this repo with a maven build step here
-    echo "hello"
-  }
-
+     stage('Build') {
+       steps {
+          ssh "mvn -version"
+          sh  'mvn clean package'
+        }
+     }
   // you should add a test report here
+  }
 }
