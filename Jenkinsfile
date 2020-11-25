@@ -12,7 +12,7 @@ node {
      }
      stage('Build') {
        steps {
-          ssh "mvn -version"
+          echo "test"
         }
      }
   // you should add a test report here
