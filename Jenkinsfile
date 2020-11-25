@@ -13,7 +13,6 @@ node {
      stage('Build') {
        steps {
           ssh "mvn -version"
-          sh  'mvn clean package'
         }
      }
   // you should add a test report here
