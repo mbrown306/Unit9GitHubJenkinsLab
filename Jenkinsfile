@@ -1,8 +1,8 @@
-Pipeline {
+node {
     agent any
 
     stages {
-        stage('Checkout Sources') {
+        stage('Checkout') {
             steps {
                 echo 'Building..'
                 git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
@@ -12,16 +12,6 @@ Pipeline {
             steps {
                 echo 'Building..'
             }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-}
+         }
+      }
+   }
