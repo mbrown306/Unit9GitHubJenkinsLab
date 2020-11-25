@@ -7,7 +7,7 @@ node {
   stage('Build') {
      steps {
         withMaven( maven : 'Maven3' ) {
-           sh  'mvn clean complie'
+           sh  'mvn clean package'
      }
   }
   stage('Test') {
