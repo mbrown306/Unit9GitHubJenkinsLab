@@ -10,5 +10,9 @@ node {
         echo "test"
     }
      }
-  // you should add a test report here
+     stage('Test') {
+     withMaven( maven: 'maven3') {
+        sh 'mvn test' 
+    }
+     }
 }
