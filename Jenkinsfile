@@ -5,10 +5,11 @@ node {
         git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
   }
   stage('Build') {
-        // You should change this to be the appropriate thing
-         echo "hello"
+     steps {
+        withMaven( maven : 'Maven3' ) {
+           sh  'mvn clean complie'
+     }
   }
-
   stage('Test') {
     // you should build this repo with a maven build step here
     echo "hello"
