@@ -1,5 +1,10 @@
 
 node {
+  agent any
+
+  tools {
+    maven "maven3"
+  }
 
   stage('checkout sources') {
         // You should change this to be the appropriate thing
