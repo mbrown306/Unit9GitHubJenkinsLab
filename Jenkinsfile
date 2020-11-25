@@ -15,4 +15,9 @@ node {
         sh 'mvn test' 
     }
      }
+  post {
+    always {
+       cleanWs()
+    }
+  }
 }
