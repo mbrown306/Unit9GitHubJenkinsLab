@@ -5,7 +5,7 @@ node {
            git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
      }
      stage('Build') {
-     withMaven(jdk: 'jdk7', maven: 'maven3') {
+     withMaven(jdk: 'jdk8', maven: 'maven3') {
         shl 'mvn -version'
         echo "test"
     }
