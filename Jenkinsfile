@@ -9,5 +9,6 @@ node {
     // you should build this repo with a maven build step here
     echo "hello"
   }
+
   // you should add a test report here
 }
