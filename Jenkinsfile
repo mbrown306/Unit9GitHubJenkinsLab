@@ -1,15 +1,13 @@
-node {
-    agent any
 
-    stages {
-        stage('Checkout') {
-            steps {
-                echo 'Building..'
-                git branch: 'dev9', credentialsId: '92e67bbf-08e5-462c-b44d-f0fe0c93f3f5', url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab/'
-            }
-        }
-        stage('Build') {
-                echo 'Building..'
-         }
-      }
-   }
+node {
+  stage('checkout sources') {
+        // You should change this to be the appropriate thing
+        git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
+  }
+
+  stage('Build') {
+    // you should build this repo with a maven build step here
+    echo "hello"
+  }
+  // you should add a test report here
+}
