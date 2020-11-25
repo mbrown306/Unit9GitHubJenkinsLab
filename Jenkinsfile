@@ -18,6 +18,8 @@ node {
   post {
     always {
        cleanWs()
+       archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+       junit 'build/reports/**/*.xml'
     }
   }
 }
