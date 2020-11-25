@@ -4,8 +4,12 @@ node {
         // You should change this to be the appropriate thing
         git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
   }
-
   stage('Build') {
+        // You should change this to be the appropriate thing
+         echo "hello"
+  }
+
+  stage('Test') {
     // you should build this repo with a maven build step here
     echo "hello"
   }
