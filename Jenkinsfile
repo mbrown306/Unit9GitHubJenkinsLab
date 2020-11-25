@@ -1,9 +1,6 @@
 node {
   agent any
 
-  tools {
-    maven "maven3"
-  }
 
   stages{
      stage('checkout sources') {
