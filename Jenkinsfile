@@ -6,7 +6,7 @@ node {
      }
      stage('Build') {
      withMaven(jdk: 'jdk8', maven: 'maven3') {
-        shl 'mvn -version'
+        sh 'mvn -version'
         echo "test"
     }
      }
