@@ -1,14 +1,14 @@
 
 node {
+
   stage('checkout sources') {
         // You should change this to be the appropriate thing
         git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
   }
   stage('Build') {
-     steps {
-        withMaven( maven : 'Maven3' ) {
-           sh  'mvn clean package'
-        }
+    steps {
+       ssh "mvn -version"
+       sh  'mvn clean package'
      }
   }
   stage('Test') {
