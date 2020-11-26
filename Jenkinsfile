@@ -6,7 +6,7 @@ node {
      }
      stage('Build') {
      withMaven( maven: 'maven3') {
-        sh 'mvn -version'
+        sh 'mvn package'
         echo "test"
     }
      }
