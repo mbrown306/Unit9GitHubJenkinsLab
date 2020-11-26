@@ -18,7 +18,7 @@ node {
   post {
     always {
        archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-       junit 'target/surefire-reports/*.xml'
+       junit '**/target/surefire-reports/TEST-*.xml'
     }
   }
 }
