@@ -17,9 +17,9 @@ node {
      }
   post {
     always {
-       cleanWs()
        archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-       junit 'build/reports/**/*.xml'
+       junit 'target/surefire-report/*.xml'
+       cleanWs()
     }
   }
 }
