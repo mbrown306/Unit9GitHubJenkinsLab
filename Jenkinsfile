@@ -6,11 +6,12 @@ node {
            git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
      }
      stage('Build') {
-     withMaven( maven: 'maven3') {
-       sh 'mvn package'
-       echo "test"
+        steps { withMaven( maven: 'maven3') {
+           sh 'mvn package'
+           echo "test"
+         }
+       }
      }
-   }
      stage('Test') {
      withMaven( maven: 'maven3') {
         sh 'mvn test'
