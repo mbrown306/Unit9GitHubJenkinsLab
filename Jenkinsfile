@@ -12,10 +12,12 @@ node {
        }
      }
      stage('Test') {
-     withMaven( maven: 'maven3') {
-        sh 'mvn test'
-    }
-  }
+        steps {
+           withMaven( maven: 'maven3') {
+           sh 'mvn test'
+          }
+       }
+     }
      stage('Deploy'){
        echo 'test'
      }
