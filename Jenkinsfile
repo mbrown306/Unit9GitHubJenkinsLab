@@ -23,6 +23,6 @@ node {
      }
      stage('Publish Test Results') {
            echo "test"
-          Junit 'target/**/*.xml'
+          junit 'target/**/*.xml'
      }
  }
