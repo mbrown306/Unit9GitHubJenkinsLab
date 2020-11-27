@@ -21,8 +21,4 @@ node {
            sh 'mvn install'
        }
      }
-     stage('Publish Test Results') {
-          archiveArtifacts artifacts: 'target/**/*.jar', fingerprint: true
-          junit 'target/**/*.xml'
-     }
  }
