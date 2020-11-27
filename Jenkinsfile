@@ -1,4 +1,5 @@
 node {
+   agent any
    stages {
      stage('checkout sources') {
            // You should change this to be the appropriate thing
@@ -20,9 +21,4 @@ node {
      }
  }
 
-  post {
-    always {
-       echo 'test'
-    }
- }
 }
