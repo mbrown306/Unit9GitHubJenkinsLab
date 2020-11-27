@@ -20,4 +20,7 @@ node {
            junit 'target/surefire-reports/TEST-*.xml'
         }
      }
+     stage('Deploy'){
+       echo 'test
+     }
  }
