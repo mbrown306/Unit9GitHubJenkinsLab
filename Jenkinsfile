@@ -12,7 +12,7 @@ node {
   }
      stage('Test') {
      withMaven( maven: 'maven3') {
-        sh 'mvn test' 
+        sh 'mvn test'
     }
   }
      post {
