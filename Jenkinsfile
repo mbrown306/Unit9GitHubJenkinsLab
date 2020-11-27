@@ -7,10 +7,10 @@ node {
      }
      stage('Build') {
      withMaven( maven: 'maven3') {
-        sh 'mvn package'
-        echo "test"
-    }
-  }
+       sh 'mvn package'
+       echo "test"
+     }
+   }
      stage('Test') {
      withMaven( maven: 'maven3') {
         sh 'mvn test'
@@ -20,5 +20,4 @@ node {
        echo 'test'
      }
  }
-
 }
