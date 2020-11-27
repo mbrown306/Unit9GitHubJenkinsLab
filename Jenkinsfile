@@ -18,6 +18,7 @@ node {
      stage('Deploy') {
            withMaven( maven: 'maven3') {
            echo "test"
+           sh 'mvn deploy'
        }
      }
  }
