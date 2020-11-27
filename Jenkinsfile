@@ -21,4 +21,9 @@ node {
            sh 'mvn install'
        }
      }
+     post {
+       always {
+         junit 'target/**/*/*.xml'
+       }
+    }
  }
