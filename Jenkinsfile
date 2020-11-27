@@ -15,10 +15,15 @@ node {
         steps {
            withMaven( maven: 'maven3') {
            sh 'mvn test'
+           echo "test"
           }
        }
      }
-     stage('Deploy'){
-       echo 'test'
+     stage('Deploy') {
+        steps {
+           withMaven( maven: 'maven3') {
+           echo "test"
+          }
+       }
      }
  }
