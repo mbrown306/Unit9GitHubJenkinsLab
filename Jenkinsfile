@@ -1,5 +1,6 @@
 node {
    agent none
+   stages{
      stage('checkout sources') {
            // You should change this to be the appropriate thing
            git url: 'https://github.com/mbrown306/Unit9GitHubJenkinsLab'
@@ -22,6 +23,7 @@ node {
            sh 'mvn install'
        }
      }
+   }
      post {
        always {
          junit 'target/**/*/*.xml'
