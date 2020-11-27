@@ -22,7 +22,7 @@ node {
        }
      }
      stage('Publish Test Results') {
-           echo "test"
+          archiveArtifacts artifacts: 'target/**/*.jar', fingerprint: true
           junit 'target/**/*.xml'
      }
  }
